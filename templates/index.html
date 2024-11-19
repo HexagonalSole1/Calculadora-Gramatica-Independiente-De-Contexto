@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Calculadora Web</h1>
+            <form method="post">
+                <input type="text" name="expresion" placeholder="Ingresa una expresión matemática">
+                <input type="submit" value="Calcular">
+            </form>
+            {% if resultado is not none %}
+                <h2>Resultado: {{ resultado }}</h2>
+            {% endif %}
+        </div>
+    </body>
+</html>
